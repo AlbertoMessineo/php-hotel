@@ -56,14 +56,19 @@ $hotels = [
     <?php
     
     foreach ($hotels as $hotel) {
-        foreach ($hotel as $type) {
-            echo $type;
-        }
+        <tr>
+         <td> echo $hotel['name'];</td> 
+        </tr>
+       
+        echo $hotel['description'];
+        echo $hotel['parking'];
+        echo $hotel['vote'];
+        echo $hotel['distance_to_center'];
+      
     }
     
     ?>
    
-
 </body>
 
 </html>
