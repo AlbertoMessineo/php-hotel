@@ -52,22 +52,19 @@ $hotels = [
 <body>
 
     <h1>PHP HOTEL</h1>
-   
-    <?php
-    
-    foreach ($hotels as $hotel) {
-        <tr>
-         <td> echo $hotel['name'];</td> 
-        </tr>
-       
-        echo $hotel['description'];
-        echo $hotel['parking'];
-        echo $hotel['vote'];
-        echo $hotel['distance_to_center'];
-      
-    }
-    
-    ?>
+
+    <ul>
+    <?php foreach ($hotels as $hotel): ?>
+        <li>
+            <h2> <?php echo $hotel['name']; ?></h2>
+            <div><?php echo $hotel['description']; ?></div>
+            <div><?php echo $hotel['parking'] ? 'Si' : 'No'; ?></div>
+            <div><?php echo $hotel['vote']; ?></div>
+            <div><?php echo $hotel['distance_to_center']; ?> km </div>
+        </li>
+    <?php endforeach;?> 
+    </ul>
+
    
 </body>
 
